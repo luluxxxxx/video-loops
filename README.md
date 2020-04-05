@@ -2,7 +2,7 @@
 
 **automatic looping of image sequence using optical flow**
 
- - C++/OpenCV (> 4.2.0)
+ - C++/[OpenCV] (> 4.2.0)
  - tested on Ubuntu 18.04 (KDE Neon)
  
 ![method](./readme_files/ScottWalker.gif)
@@ -20,7 +20,7 @@ fade A towards B around the middle frame.
 
 **using opticalflow for the fade :** 
 
-bidirectional opticalflow vector fields from pair frames of A/B are generated in .flo format.they are used to warp frameA to frameB and vice-versa.each warped frames are then blended , generating a flow driven morphing.
+bidirectional opticalflow vector fields from pair frames of A/B are generated in .[flo] format.they are used to warp frameA to frameB and vice-versa.each warped frames are then blended , generating a flow driven morphing.
 
 ![method](./readme_files/loops_method2s.jpg)
 
@@ -39,7 +39,7 @@ bidirectional opticalflow vector fields from pair frames of A/B are generated in
  
 I'm usually getting decent results with ocv_deepflow.(made it the default method).but sometimes it's worth trying with other methods.you can have good surprises...
 
-*deepflow/deepmatch*
+*[deepflow]/[deepmatch]*
 
 i'm usually getting the best morphing using deepflow/deepmatch method. I included the two static builds in this repository.they should work out of the box on Linux.(paths to executables are hardcoded in the code source , you should adjust it before compiling).you may need lipng12.so.0 to run the deep statics on Ubuntu 18.04+.
 
@@ -78,6 +78,16 @@ cd build
 cmake ..
 make
 ```
+*usage :*
+
+```sh
+./looping inputdir framename extension loop_start loop_end loop_half_window
+```
+
+(note : loop_half_window = 3 will morph between -3,+3 frames around the center of the swaped loop)
+i usually use 2 or 3 for half window.
+
+downscaling your input is usually a good idea.faster and even sometimes better results as opticalflow can struggles with very large displacement.(made 0.5 as a default which is half resolution)
 
 *make a loop*
 
@@ -88,3 +98,9 @@ make
 results should be in directory ./looping_lionwalk_94_120
 
 ![method](./readme_files/lionwalk_looped.gif)
+
+[flo]: <http://vision.middlebury.edu/flow/code/flow-code/>
+[OpenCV]: <https://docs.opencv.org/4.2.0/d4/dee/tutorial_optical_flow.html>
+[deepflow]: <https://thoth.inrialpes.fr/src/deepflow/>
+[deepmatch]: <https://thoth.inrialpes.fr/src/deepmatching/>
+
