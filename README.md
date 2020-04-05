@@ -87,7 +87,7 @@ make
 (note : loop_half_window = 3 will morph between -3,+3 frames around the center of the swaped loop)
 i usually use 2 or 3 for half window.
 
-downscaling your input is usually a good idea.faster and even sometimes better results as opticalflow can struggles with very large displacement.(made 0.5 as a default which is half resolution)
+downscaling your input is usually a good idea.faster and even sometimes better results as opticalflow can struggle with very large displacement.(made 0.5 as a default which is half resolution)
 
 *make a loop*
 
@@ -99,8 +99,12 @@ results should be in directory ./looping_lionwalk_94_120
 
 ![method](./readme_files/lionwalk_looped.gif)
 
+i'm using this technique a lot in my experiments these days.you can see some results in my [twitter] feed.
+i hope you can have some fun with it.
+luluxXX
+
 [flo]: <http://vision.middlebury.edu/flow/code/flow-code/>
 [OpenCV]: <https://docs.opencv.org/4.2.0/d4/dee/tutorial_optical_flow.html>
 [deepflow]: <https://thoth.inrialpes.fr/src/deepflow/>
 [deepmatch]: <https://thoth.inrialpes.fr/src/deepmatching/>
-
+[twitter]: <https://twitter.com/luluixixix/status/1244663700482637835>
