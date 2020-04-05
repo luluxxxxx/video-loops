@@ -5,9 +5,9 @@ automatic looping of image sequence using optical flow
 
 methodology :
 
-![method](./readme_files/loops_method1.jpg)
+![method](./readme_files/loops_method1s.jpg)
 
 using opticalflow for the fade : 
 
-![method](./readme_files/loops_method2.jpg)
+![method](./readme_files/loops_method1s.jpg)
 
