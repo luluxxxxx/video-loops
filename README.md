@@ -24,8 +24,6 @@ bidirectional opticalflow vector fields from pair frames of A/B are generated in
 
 ![method](./readme_files/loops_method2s.jpg)
 
-![method](./readme_files/ScottWalker1.gif)
-
 **Opticalflow methods :**
 
 *OpenCV : implemented most of opencv proposed methods*
@@ -47,6 +45,8 @@ i'm usually getting the best morphing using deepflow/deepmatch method. I include
 
 beware that you should downscale your source images before using deepflow/deepmatch. I usually divide input resolution by 2 or 3.(see [flowscale] parameter) or it could take a loooong time to process and even crash.
  
+![method](./readme_files/ScottWalker1.gif)
+
 **installation/compilation**
 
 *my opencv install*
