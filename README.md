@@ -47,8 +47,30 @@ beware that you should downscale your source images before using deepflow/deepma
  
 **installation/compilation**
 
+*my opencv install*
+
 ```sh
-cd /toyourinstallationpath
+cd /yourpath/
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.2.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.2.0.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
+cd /yourpath/opencv-4.2.0
+mkdir build;cd build
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+  -D CMAKE_INSTALL_PREFIX=/yourpath/opencv-4.2.0_install \
+  -D INSTALL_PYTHON_EXAMPLES=ON \ 
+  -D INSTALL_C_EXAMPLES=ON \ 
+  -D OPENCV_EXTRA_MODULES_PATH=/yourpath/opencv_contrib-4.0.1/modules \ 
+  -DWITH_CUDA=ON -DWITH_QT=ON -DBUILD_opencv_cudacodec=OFF ..
+make -j8
+make install
+```
+
+*clone and compile*
+
+```sh
+cd /yourpath/
 git clone https://github.com/luluxxxxx/video-loops.git
 cd video-loops
 mkdir build
@@ -56,3 +78,13 @@ cd build
 cmake ..
 make
 ```
+
+*make a loop*
+
+```sh
+./looping ../images lionwalk jpg 94 120 4
+```
+
+results should be in directory ./looping_lionwalk_94_120
+
+![method](./readme_files/lionwalk_looped.gif)
