@@ -9,5 +9,5 @@ methodology :
 
 using opticalflow for the fade : 
 
-![method](./readme_files/loops_method1s.jpg)
+![method](./readme_files/loops_method2s.jpg)
 
