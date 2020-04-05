@@ -1,10 +1,7 @@
 # video-loops
 automatic looping of image sequence using optical flow
 
-<img src="./readme_files/lionwalk_looped.gif" alt="Kitten"
-	title="A cute kitten" width="150" height="100" />
-	
-![method](./readme_files/lionwalk_looped.gif)
+![method](./readme_files/ScottWalker.gif)
 
 methodology :
 
