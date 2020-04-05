@@ -24,6 +24,8 @@ bidirectional opticalflow vector fields from pair frames of A/B are generated in
 
 ![method](./readme_files/loops_method2s.jpg)
 
+![method](./readme_files/ScottWalker1.gif)
+
 **Opticalflow methods :**
 
 *OpenCV : implemented most of opencv proposed methods*
