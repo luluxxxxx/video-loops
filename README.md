@@ -41,7 +41,7 @@ I'm usually getting decent results with ocv_deepflow.(made it the default method
 
 *[deepflow]/[deepmatch]*
 
-i'm usually getting the best morphing using deepflow/deepmatch method. I included the two static builds in this repository.they should work out of the box on Linux.(paths to executables are hardcoded in the code source , you should adjust it before compiling).you may need lipng12.so.0 to run the deep statics on Ubuntu 18.04+.
+i'm usually getting the best morphing using deepflow/deepmatch method. I included the two static builds in this repository.they should work out of the box on Linux.(paths to executables are hardcoded in the code source , you should adjust it before compiling).you may need [libpng12].so.0 to run the deep statics on Ubuntu 18.04+.
 
 beware that you should downscale your source images before using deepflow/deepmatch. I usually divide input resolution by 2 or 3.(see [flowscale] parameter) or it could take a loooong time to process and even crash.
  
@@ -66,6 +66,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 make -j8
 make install
 ```
+
+edit CMakeLists.txt to match your installation path.
 
 *clone and compile*
 
@@ -107,4 +109,6 @@ luluxXX
 [OpenCV]: <https://docs.opencv.org/4.2.0/d4/dee/tutorial_optical_flow.html>
 [deepflow]: <https://thoth.inrialpes.fr/src/deepflow/>
 [deepmatch]: <https://thoth.inrialpes.fr/src/deepmatching/>
+[libpng12]: <https://launchpad.net/~ubuntu-security/+archive/ubuntu/ppa/+build/15108504/+files/libpng12-0_1.2.54-1ubuntu1.1_amd64.deb>
 [twitter]: <https://twitter.com/luluixixix/status/1244663700482637835>
+
