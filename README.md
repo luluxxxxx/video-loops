@@ -37,9 +37,22 @@ bidirectional opticalflow vector fields from pair frames of A/B are generated in
  -    pcaflow
  -    DISflow
  
+I'm usually getting decent results with ocv_deepflow.(made it the default method).but sometimes it's worth trying with other methods.you can have good surprises...
+
 *deepflow/deepmatch*
 
-i'm usually getting the best morphing using deepflow/deepmatch method. I included the two static builds in this repository.they should work out of the box on Linux.(paths to executables are hardcoded in the code source , you should adjust it before compiling)
- 
-**installation**
+i'm usually getting the best morphing using deepflow/deepmatch method. I included the two static builds in this repository.they should work out of the box on Linux.(paths to executables are hardcoded in the code source , you should adjust it before compiling).you may need lipng12.so.0 to run the deep statics on Ubuntu 18.04+.
 
+beware that you should downscale your source images before using deepflow/deepmatch. I usually divide input resolution by 2 or 3.(see [flowscale] parameter) or it could take a loooong time to process and even crash.
+ 
+**installation/compilation**
+
+```sh
+cd /toyourinstallationpath
+git clone https://github.com/luluxxxxx/video-loops.git
+cd video-loops
+mkdir build
+cd build
+cmake ..
+make
+```
